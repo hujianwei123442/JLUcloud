@@ -1,0 +1,56 @@
+<?php
+/**
+ * 文件分配数据存储
+ * 格式：
+ * [
+ *   'assignments' => [
+ *     [
+ *       'id' => '唯一ID',
+ *       'file_path' => '文件路径',
+ *       'file_name' => '文件名称',
+ *       'assigned_to' => '分配给的用户',
+ *       'assigned_by' => '分配人',
+ *       'permission' => 'read/write',
+ *       'remark' => '备注',
+ *       'create_time' => '创建时间'
+ *     ]
+ *   ]
+ * ]
+ */
+return [
+    'assignments' => []
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

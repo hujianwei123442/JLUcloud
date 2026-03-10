@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>文件分配管理 - Amoli私有云</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/public.css" media="all" />
+</head>
+
+<body class="childrenBody">
+	<div class="layui-row layui-col-space15">
+		<div class="layui-col-md12">
+			<div class="layui-card">
+				<div class="layui-card-header">
+					<span>文件分配管理</span>
+					<button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;" id="assignFile">
+						<i class="layui-icon">&#xe608;</i> 分配文件
+					</button>
+				</div>
+				<div class="layui-card-body">
+					<table class="layui-hide" id="fileAssignTable" lay-filter="fileAssignTable"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 表格工具栏 -->
+	<script type="text/html" id="fileAssignBar">
+		<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	</script>
+
+	<!-- 文件分配表单 -->
+	<script type="text/html" id="fileAssignForm">
+		<form class="layui-form" lay-filter="fileAssignFormFilter" style="padding: 20px;">
+			<div class="layui-form-item">
+				<label class="layui-form-label">文件路径</label>
+				<div class="layui-input-block">
+					<input type="text" name="file_path" placeholder="请输入文件路径，如：/upload/document.pdf" lay-verify="required" class="layui-input">
+					<div class="layui-form-mid layui-word-aux">相对于网站根目录的路径</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">文件名称</label>
+				<div class="layui-input-block">
+					<input type="text" name="file_name" placeholder="请输入文件名称" lay-verify="required" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">分配给</label>
+				<div class="layui-input-block">
+					<select name="assigned_to" lay-verify="required" id="userSelect">
+						<option value="">请选择用户</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">权限</label>
+				<div class="layui-input-block">
+					<select name="permission" lay-verify="required">
+						<option value="">请选择权限</option>
+						<option value="read" selected>只读</option>
+						<option value="write">读写</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item layui-form-text">
+				<label class="layui-form-label">备注</label>
+				<div class="layui-input-block">
+					<textarea name="remark" placeholder="请输入备注信息" class="layui-textarea"></textarea>
+				</div>
+			</div>
+			<div class="layui-form-item" style="text-align: right;">
+				<button class="layui-btn" lay-submit lay-filter="submitFileAssign">确定</button>
+				<button type="button" class="layui-btn layui-btn-primary" onclick="layer.closeAll()">取消</button>
+			</div>
+		</form>
+	</script>
+
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="FileAssign.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+﻿<?php exit;?>
+sync_content|a:0:{}
+sync_interval|i:900
+conflict_strategy|s:6:"newest"
+auto_sync|b:0;
